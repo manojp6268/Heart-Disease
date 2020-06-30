@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Heart Disease Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='heart-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Heart disease Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 50"><br>
+                <input class="form-input" type="text" name="Gender" placeholder="0: Female, 1: Male"><br>
+                <input class="form-input" type="text" name="Chest Pain" placeholder="1: typical angina, 2: atypical angina, 3: non-anginal pain, 4: asymptomatic"><br>
+                <input class="form-input" type="text" name="Resting Blood pressure" placeholder="BP eg. 120"><br>
+                <input class="form-input" type="text" name="Cholestrol" placeholder="Serum cholestoral in (mg/dl) eg. 160"><br>
+                <input class="form-input" type="text" name="Blood Sugar" placeholder="fasting blood sugar > 120 (mg/dl) eg. 0: No, 1: Yes"><br>
+                <input class="form-input" type="text" name="restecg" placeholder="resting electrocardiographic results (values 0,1,2)"><br>                
+		<input class="form-input" type="text" name="Max Heart rate" placeholder="maximum heart rate achieved eg. 130"><br>
+                <input class="form-input" type="text" name="Exang" placeholder="exercise induced angina eg. 0: No, 1: Yes"><br>
+                <input class="form-input" type="text" name="Old peak" placeholder="ST depression induced by exercise relative to rest eg. 1.5"><br>
+                <input class="form-input" type="text" name="slope" placeholder="the slope of the peak exercise ST segment (values 0,1,2)"><br>
+                <input class="form-input" type="text" name="Ca" placeholder="fnumber of major vessels (0-3) colored by flourosopy"><br>
+                <input class="form-input" type="text" name="thal" placeholder="3 = normal; 6 = fixed defect; 7 = reversable defect"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/manojp6268/Heart-Disease"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/manoj-p-a95b7b1a2/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Manoj.</p>
+       </div>
+
+    </body>
+</html>
